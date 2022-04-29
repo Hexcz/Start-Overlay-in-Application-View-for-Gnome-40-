@@ -3,18 +3,11 @@
   "description": "When activating overview, the application view is shown instead of the view with the windows.", 
   "name": "Start Overlay in Application View", 
   "shell-version": [
-    "3.26",
-    "3.28",
-    "3.30",
-    "3.34",
-    "3.32",
-    "3.36",
-    "3.38",
     "40",
     "41",
     "42"
   ], 
   "url": "", 
-  "uuid": "start-overlay-in-application-view@cis.net", 
+  "uuid": "start-overlay-in-application-view@Hex_cz", 
   "version": 2
 }

@@ -4,7 +4,7 @@
 const Main = imports.ui.main;
 const Shell = imports.gi.Shell;
 const Overview = imports.ui.overview;
-const OverviewControls = imports.ui.overviewControls; //needed because of Gnome 40+ changes on Overview and AppGrid//
+const OverviewControls = imports.ui.overviewControls;
 
 // ......................................................................... //
 // extension scoped variable used to hold the original toggle function so we
@@ -47,7 +47,7 @@ function enable() {
                 this.hide();
             }
             else {
-                this.show(OverviewControls.ControlsState.APP_GRID); //show() needed a different parameter on Gnome 40+//
+                this.show(OverviewControls.ControlsState.APP_GRID);
             }
         };
 
