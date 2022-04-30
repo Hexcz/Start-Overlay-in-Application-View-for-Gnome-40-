@@ -3,10 +3,10 @@ When activating overview (Super button), the application view is shown instead o
 
 ## Expected behavior:
 After hitting Super key, instead of display overview:
-https://imgur.com/7ron9Po
+![Overview](https://imgur.com/7ron9Po)
 
 Applications view is displayed in it's place:
-https://imgur.com/CKpmBQk
+![Application view](https://imgur.com/CKpmBQk)
 
 ## Manual instalation:
 For manual installation, just paste the folder containing the extension.js and metadata.js files at ".local/share/gnome-shell/extensions" folder, then restart your gnome-shell (alt+f2, type r on command box) or simply restart your computer. After that the extension should appear on extensions manager.
