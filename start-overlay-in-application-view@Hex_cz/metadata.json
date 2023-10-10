@@ -3,13 +3,9 @@
   "description": "When activating overview (Super button), the application view is shown instead of the view with the windows.", 
   "name": "Start Overlay in Application View", 
   "shell-version": [
-    "40",
-    "41",
-    "42",
-    "43",
-    "44"
+    "45"
   ], 
   "url": "https://github.com/Hexcz/Start-Overlay-in-Application-View-for-Gnome-40-", 
   "uuid": "start-overlay-in-application-view@Hex_cz", 
-  "version": 1
+  "version": 6
 }
