@@ -1,23 +1,28 @@
-const Overview = imports.ui.overview;
+import { Extension } from 'resource:///org/gnome/shell/extensions/extension.js';
+import * as Overview from 'resource:///org/gnome/shell/ui/overview.js';
 
-let originalToggle;
+export default class StartOverlayInAppViewExtension extends Extension {
+    originalToggle;
 
-function init() {
-    originalToggle = Overview.Overview.prototype.toggle;
-}
+    constructor(metadata) {
+        super(metadata);
 
-function enable() {
-    Overview.Overview.prototype.toggle = function () {
-        if (this.isDummy)
-            return;
+        this.originalToggle = Overview.Overview.prototype.toggle;
+    }
 
-        if (this._visible)
-            this.hide();
-        else
-            this.showApps();
-    };
-}
+    enable() {
+        Overview.Overview.prototype.toggle = function () {
+            if (this.isDummy)
+                return;
 
-function disable() {
-    Overview.Overview.prototype.toggle = originalToggle;
+            if (this._visible)
+                this.hide();
+            else
+                this.showApps();
+        };
+    }
+
+    disable() {
+        Overview.Overview.prototype.toggle = this.originalToggle;
+    }
 }
