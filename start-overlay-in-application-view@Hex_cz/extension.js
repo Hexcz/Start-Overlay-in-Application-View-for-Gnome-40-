@@ -1,4 +1,5 @@
 import { Extension } from 'resource:///org/gnome/shell/extensions/extension.js';
+import * as Main from 'resource:///org/gnome/shell/ui/main.js';
 import * as Overview from 'resource:///org/gnome/shell/ui/overview.js';
 
 export default class StartOverlayInAppViewExtension extends Extension {
@@ -20,6 +21,8 @@ export default class StartOverlayInAppViewExtension extends Extension {
             else
                 this.showApps();
         };
+        
+        Main.overview.showApps()
     }
 
     disable() {
