@@ -22,7 +22,9 @@ export default class StartOverlayInAppViewExtension extends Extension {
                 this.showApps();
         };
         
-        Main.overview.showApps()
+        if (Main.layoutManager._startingUp){
+            Main.layoutManager.connectObject('startup-complete', () => Main.overview.showApps(), this);
+        }
     }
 
     disable() {
